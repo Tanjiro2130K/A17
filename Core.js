@@ -726,7 +726,7 @@ Typed *surrender* to surrender and admited defeat`
         A17.sendMessage(from, { react: { text: "❤", key: m.key } })
 
         let { data } = await axios.get('https://api.github.com/repos/Kai0071/A17');
-        teks = `*A17 Script*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/Kai0071/A17\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
+        teks = `*It's An private script sorry 😅. `
         /*  let buttons = [
           {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 DEVELOPER 🍁'}, type: 1}
           ] */
@@ -819,8 +819,8 @@ Typed *surrender* to surrender and admited defeat`
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
-        A17.sendMessage(from, { react: { text: "💫", key: m.key } })
-        reply(`⚙ *My developer's group:* http://gg.gg/gc-support`)
+        A17.sendMessage(from, { react: { text: "🫧", key: m.key } })
+        reply(`🫧 support group : https://chat.whatsapp.com/CHAW2QmNQW5EPcpyuADVFS`)
       }
         break;
 
@@ -830,7 +830,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
 
         A17.sendMessage(from, { react: { text: "💫", key: m.key } })
-        reply(`⚙ My Source Code is </> - https://github.com/Kai0071/A17`)
+        reply(`its an private script sorry 😅`)
       }
         break;
 
@@ -855,10 +855,10 @@ Typed *surrender* to surrender and admited defeat`
         if (!args[0]) return reply(`Use ${prefix + command} number\nExample ${prefix + command} ${OwnerNumber}`)
         bnnd = q.split("|")[0].replace(/[^0-9]/g, '')
         let ceknye = await A17.onWhatsApp(bnnd)
-        if (ceknye.length == 0) return reply(`Enter A Valid And Registered Number On WhatsApp!!!`)
+        if (ceknye.length == 0) return reply(`Enter A number to add `)
         Owner.push(bnnd)
         fs.writeFileSync('./database/mod.json', JSON.stringify(Owner))
-        reply(`Number ${bnnd} Has Become An Owner!!!`)
+        reply(`Number ${bnnd} you are now an one of the owner`)
         break;
 
 
@@ -874,7 +874,7 @@ Typed *surrender* to surrender and admited defeat`
         unp = Owner.indexOf(ya)
         Owner.splice(unp, 1)
         fs.writeFileSync('./database/mod.json', JSON.stringify(Owner))
-        reply(`The Numbrr ${ya} Has been deleted from owner list by the owner!!!`)
+        reply(`sorry ${ya} you are no more owner `)
         break;
 
 
@@ -889,7 +889,7 @@ Typed *surrender* to surrender and admited defeat`
           const mods = JSON.parse(modData);
 
           if (mods.length === 0) {
-            reply('There are no mods in the list.');
+            reply('There are no mods');
           } else {
             let modList = '';
 
@@ -1024,10 +1024,10 @@ Typed *surrender* to surrender and admited defeat`
           const status = args[0];
           if (status === 'on') {
             global.autoreadgc = true;
-            return m.reply('Auto-Read-GC is now enabled.');
+            return m.reply('Auto-Read-GC is enabled now.');
           } else {
             global.autoreadgc = false;
-            return m.reply('Auto-Read-GC is now disabled.');
+            return m.reply('Auto-Read-GC is disabled now.');
           }
         } else {
           return m.reply(`Usage: ${global.prefa[0]}autoreadgc [on/off]`);
@@ -1045,21 +1045,21 @@ Typed *surrender* to surrender and admited defeat`
 
         if (args.length === 0) {
           if (global.autoTyping) {
-            return m.reply(`Auto typing in group chats is currently *enabled*.\n\nTo disable, use \`${global.prefa[0]}autotyping off\`.`);
+            return m.reply(`Auto typing in group chats is currently enable.`);
           } else {
-            return m.reply(`Auto typing in group chats is currently *disabled*.\n\nTo enable, use \`${global.prefa[0]}autotyping on\`.`);
+            return m.reply(`Auto typing in group chats is currently disabled.`);
           }
         } else if (args.length === 1 && (args[0] === 'on' || args[0] === 'off')) {
           const status = args[0];
           if (status === 'on') {
             global.autoTyping = true;
-            return m.reply(`Auto typing in group chats is now *enabled*.`);
+            return m.reply(`Auto typing in group chats is  enabled now.`);
           } else {
             global.autoTyping = false;
-            return m.reply(`Auto typing in group chats is now *disabled*.`);
+            return m.reply(`Auto typing in group chats is disabled now.`);
           }
         } else {
-          return m.reply(`Usage: \`${global.prefa[0]}autotyping [on/off]\``);
+          return m.reply(`Usage: \`${global.prefa[0]}autotyping on | off\``);
         }
         break;
 
@@ -1074,21 +1074,21 @@ Typed *surrender* to surrender and admited defeat`
 
         if (args.length === 0) {
           if (global.autoRecord) {
-            return m.reply(`Auto recording is currently *enabled*.\n\nTo disable, use \`${global.prefa[0]}autorecord off\`.`);
+            return m.reply(`Auto recording is currently enabled.`);
           } else {
-            return m.reply(`Auto recording is currently *disabled*.\n\nTo enable, use \`${global.prefa[0]}autorecord on\`.`);
+            return m.reply(`Auto recording is currently disabled.`);
           }
         } else if (args.length === 1 && (args[0] === 'on' || args[0] === 'off')) {
           const status = args[0];
           if (status === 'on') {
             global.autoRecord = true;
-            return m.reply(`Auto recording is now *enabled*.`);
+            return m.reply(`Auto recording is now enabled.`);
           } else {
             global.autoRecord = false;
-            return m.reply(`Auto recording is now *disabled*.`);
+            return m.reply(`Auto recording is now disabled.`);
           }
         } else {
-          return m.reply(`Usage: \`${global.prefa[0]}autorecord [on/off]\``);
+          return m.reply(`Usage: \`${global.prefa[0]}autorecord on | off\``);
         }
         break;
 
@@ -1102,22 +1102,15 @@ Typed *surrender* to surrender and admited defeat`
         const systemName = os.platform() + ' ' + os.release();
 
         const respon = `
-  🤖 *A17's Server Info* 🤖
+  *—(••÷[ 𝙕𝙀𝙍𝙊 𝙏𝙒𝙊 ]÷••)—*
+
+  🔰UPTIME : ${runtime(process.uptime())}
+
+  🤖BOT : 1
+
+  📑COMMANDS : 211.`;
   
-  *System*: ${systemName}
-  
-  *RAM*: ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
-  
-  *NodeJS Memory Usage*: ${Object.keys(used).map(key => `${key}: ${formatp(used[key])}`).join(', ')}
-  
-  *Total CPU Usage*: ${totalCpuUsage}%
-  
-  *CPU Model*: ${cpu.model.trim()} (${cpu.speed} MHz)
-  
-  *Runtime*: ${runtime(process.uptime())}
-  
-  *Response Speed*: ${latensie.toFixed(4)} seconds
-  `.trim();
+ 
 
         m.reply(respon);
         break;
@@ -1139,7 +1132,7 @@ Typed *surrender* to surrender and admited defeat`
           A17.sendMessage(from, { text: folderName + fileList }, m);
         } catch (error) {
           console.error(error);
-          A17.sendMessage(from, { text: 'Error reading directory contents.🫳🏻' }, m);
+          A17.sendMessage(from, { text: ''🟥 ERROR 🟥' }, m);
         }
         break;
 
@@ -1177,7 +1170,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!isCreator) return reply(mess.botowner)
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-        if (!args[0]) return reply(`Select add or del (add to ban, del to unban), For Example: reply *${prefix}ban add* to the user you want to ban.`)
+        if (!args[0]) return reply(`Select an user to ban 🪶`)
         if (args[1]) {
           orgnye = args[1] + "@s.whatsapp.net"
         } else if (m.quoted) {
@@ -1192,7 +1185,7 @@ Typed *surrender* to surrender and admited defeat`
           if (!isBane) return ads('User is already unbanned.')
           let delbans = banUser.indexOf(orgnye)
           banUser.splice(delbans, 1)
-          reply(`Successfully Unbanned the user.`)
+          reply(`you are in jail now 🔐`)
         } else {
           reply("Error")
         }
@@ -1268,11 +1261,11 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`please provide a report message you want to deliver`)
         if (text.length > 300) return reply(`Are you trying to send virus!`)
-        const txtmsg = `*📮 Report Message*\n\n*Sender ➛* wa.me/${m.sender.split("@")[0]}\n\n*Group Name ➛* ${groupName}\n\n*Message ➛*  ${text}`
+        const txtmsg = `*📮 ʀᴇᴘᴏʀᴛ*\n\n*👤 ᴜꜱᴇʀ* wa.me/${m.sender.split("@")[0]}\n\n*🎀 ᴳᴿᴼᵁᴾ * ${groupName}\n\n*🪶 ᴛᴇxᴛ*  ${text}`
         for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
           await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
         await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
-        reply(`*✅ Your Report has been submitted Successfully to Support group & Owner*\n\n*You will get response shortly... ♥️*`);
+        reply(`* Your Report has been submitted Successfully to Support group*\n\n*your letter gonna check soon as possible 🍛*`);
       }
         break;
 
@@ -1283,7 +1276,7 @@ Typed *surrender* to surrender and admited defeat`
         A17.sendMessage(from, { react: { text: "🎲", key: m.key } })
         const result = Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
 
-        const diceMessage = `🎲 *Dice Roll Result:* ${result}`;
+        const diceMessage = `🎲 *ʀᴇꜱᴜʟᴛ* ${result}`;
 
         reply(diceMessage);
       }
@@ -1295,7 +1288,7 @@ Typed *surrender* to surrender and admited defeat`
         // Simulate flipping a coin (0 for heads, 1 for tails)
         const result = Math.random() < 0.5 ? 'Heads' : 'Tails';
 
-        const flipCoinMessage = `🪙 *Coin Flip Result: ${result}*`;
+        const flipCoinMessage = `🪙 *ʀᴇꜱᴜʟᴛ* ${result}*`;
         reply(flipCoinMessage);
       }
         break;
@@ -1791,7 +1784,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "❤️", key: m.key } })
 
-        reply(` *━━〈  ⚡ Reactions ⚡  〉━━*\n\nbonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, highfive, handhold, nom, glomp, bite, slap, kill, happy, wink, poke, dance, cringe`)
+        reply(` *_🍊 AVAILABLE REACTIONS 🍊_*\n\nbonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, highfive, handhold, nom, glomp, bite, slap, kill, happy, wink, poke, dance, cringe`)
         break;
 
 
@@ -1799,9 +1792,10 @@ Typed *surrender* to surrender and admited defeat`
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         {
-          let txt = `「 *All User Limit* 」\n\n`
+          let txt = `「 ᴀʟʟ ᴜꜱᴇʀ ʟɪᴍɪᴛ
+          」\n\n`
           for (let i of _limit) {
-            txt += ` *User ID :* @${i.id.split("@")[0]}\n➸ *Limit* : ${i.limit}\n`
+            txt += ` *ᴜꜱᴇʀ ɪᴅ :* @${i.id.split("@")[0]}\n➸ *Limit* : ${i.limit}\n`
           }
           reply(txt)
         }
@@ -2216,7 +2210,7 @@ Typed *surrender* to surrender and admited defeat`
         if (!m.isGroup) return reply(mess.grouponly);
         A17.sendMessage(from, { react: { text: "⚠️", key: m.key } })
 
-        reply(` *━━〈 ⚠️ NSFW Menu ⚠️  〉━━*\n\n gifs, hentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
+        reply(` *⚠️ NSFW*\n\n gifs, hentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
         break;
 
 
@@ -2752,7 +2746,7 @@ Typed *surrender* to surrender and admited defeat`
         if (!isAdmins && !isCreator) return reply(mess.useradmin)
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
 
-        if (!m.quoted) return reply('Please mention a message baka!')
+        if (!m.quoted) return reply('ᴍᴇɴᴛɪᴏɴ ᴀ ᴛᴇxᴛ ʙᴀᴋᴀ')
         let { chat, fromMe, id } = m.quoted
 
         const key = {
@@ -2776,7 +2770,7 @@ Typed *surrender* to surrender and admited defeat`
       case 'ghstalk': case 'githubstalk': case 'github': {
         A17.sendMessage(from, { react: { text: "🔍", key: m.key } })
 
-        if (!q) return reply(`Give me a user name like *${prefix}github Kai0071*`)
+        if (!q) return reply(`Give me a user name`)
 
         gitdata = await githubstalk.githubstalk(`${q}`)
         A17.sendMessage(m.chat, {
@@ -3032,7 +3026,7 @@ Typed *surrender* to surrender and admited defeat`
             { buttonId: `${prefix}antilinkgc on`, buttonText: { displayText: 'On' }, type: 1 },
             { buttonId: `${prefix}antilinkgc off`, buttonText: { displayText: 'Off' }, type: 1 }
           ]
-          await A17.sendButtonText(m.chat, buttonsntilink, `Please click the button below On / Off`, `${global.BotName}`, m)
+          await A17.sendButtonText(m.chat, buttonsntilink, `Please click the button below On | Off`, `${global.BotName}`, m)
         }
       }
         break;
@@ -5143,7 +5137,7 @@ _Click the button below to download_`
             image: { url: thumbnailUrl }, // Include the thumbnail image in the response
             caption: `\n*Downloading:* *${anu.title}*
             
-  ⏳ *Duration :* ${anu.timestamp}
+  ❄️ *Duration :* ${anu.timestamp}
 
   📈 *Viewers :* ${anu.views}
 
@@ -6799,40 +6793,22 @@ _Click the button below to download_`
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "✨", key: m.key } })
-        const helpmenu = `Hemlo *${pushname}* Dear...!! ${nowtime} ,
+        const helpmenu = `🎀ʜᴇʟʟᴏ *${pushname}* ᴅᴀʀʟɪɴ ,
   
-Hemlo, I am "A17" a WhatsApp bot create and recode by Kai to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
+    🎗ɪ'ᴍ ᴢᴇʀᴏᴛᴡᴏ ᴀ ᴡʜᴀᴛꜱᴀᴘᴘ-ʙᴏᴛ.
+    
+    ᴍʏ ᴘʀᴇꜰɪx ɪꜱ -
+     
+📭COMMANDS 
+
+  ⊱•─ {⋅✯ Core  ✯⋅} ─•⊰
+
+  🍁 repo,script,speak,support
+     stalk,setprefix,auto-status
+     auto-typing,auto-recoding
 
 
-  ⌯    *Time* : ${kaitime}
-  ⌯    *Date* : ${kaidate}
-
-
-  〢━━━ 〄 Bot Info 〄 ━━━〢
-
-
-  ⌯    *Bot usr name :* ${pushname} 
-  ⌯    *My prefix is :*  ${prefix}
-  ⌯    *Owner name :* ${global.OwnerName} 
-  ⌯    *Bot runtime :* ${runtime(process.uptime())} 
-  ⌯    *Platform :* Linux
-
-
-  〢━━━ 〄 Core 〄 ━━━〢
-
-
-  ⌯     ${prefix}repo
-  ⌯     ${prefix}script
-  ⌯     ${prefix}speak
-  ⌯     ${prefix}support
-  ⌯     ${prefix}stalk
-  ⌯     ${prefix}setprefix
-  ⌯     ${prefix}auto-status
-  ⌯     ${prefix}auto-typing
-  ⌯     ${prefix}auto-recoding
-
-
-  〢━━━ ⌬ Owner Only ⌬ ━━━〢
+   Owner Only ⌬ ━━━〢
 
 
   ⌯     ${prefix}join
