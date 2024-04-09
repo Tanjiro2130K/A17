@@ -1132,7 +1132,7 @@ Typed *surrender* to surrender and admited defeat`
           A17.sendMessage(from, { text: folderName + fileList }, m);
         } catch (error) {
           console.error(error);
-          A17.sendMessage(from, { text: ''🟥 ERROR 🟥' }, m);
+          A17.sendMessage(from, { text: '🟥 ERROR 🟥' }, m);
         }
         break;
 
