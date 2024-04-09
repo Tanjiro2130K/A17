@@ -3822,19 +3822,6 @@ Typed *surrender* to surrender and admited defeat`
         break;
 
 
-      case 'add': {
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!isBotAdmins) return reply(mess.botadmin);
-        if (!isCreator) return reply(mess.botowner)
-        A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-
-
-        let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
-        if (users.length == 0) return reply(`Please write the number of the person you want to add to thhis group`)
-        await A17.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(`User Added Successfully!`)).catch((err) => reply(`Cannot add that user to this group!`))
-      }
-        break;
-
 
       case 'invite': {
         if (isBan) return reply(mess.banned);
@@ -6818,11 +6805,11 @@ _Click the button below to download_`
  
 🌺  ⊱•─ {⋅✯ Group ✯⋅} ─•⊰
  
-    add,invite,remove,promote
-    demote,grouplink,group-event
+    invite,remove,promotedemote
+    grouplink,group-event,revoke
     groupsetting,setname,setgcpp
-    setdesc,revoke,tagallhidetag
-    nsfw,nsnfwmenu
+    setdesc,tagallhidetag,nsfw
+    nsnfwmenu
 
 
  🌼 ⊱•─ {⋅✯ anti Link ✯⋅} ─•⊰
