@@ -3583,11 +3583,11 @@ Typed *surrender* to surrender and admited defeat`
         if (!m.isGroup) return reply(mess.grouponly);
         if (!isAdmins && !isCreator) return reply(mess.useradmin)
         A17.sendMessage(from, { react: { text: "😳", key: m.key } })
-        let teks = `「 Attention 」
+        let teks = ` 🍥 Konichiwa guys 🍥
 
 *Message : ${args.join(" ") ? args.join(" ") : 'no message'}*\n\n`
         for (let mem of participants) {
-          teks += `» @${mem.id.split('@')[0]}\n`
+          teks += `🎗️ @${mem.id.split('@')[0]}\n`
         }
         A17.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
       }
