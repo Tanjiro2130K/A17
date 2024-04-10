@@ -6828,8 +6828,9 @@ _Click the button below to download_`
 
  🫧 ⊱•─ {⋅✯ Economy ✯⋅} ─•⊰
 
-    daily,wallet,bank,bankupgrade,deposit
-    withdraw,rob,transfer,wealth
+    daily,wallet,bank,bankupgrade
+    deposit,withdraw,rob,transfer
+    wealth
 
 
  🎮 ⊱•─ {⋅✯Games ✯⋅} ─•⊰
@@ -6876,7 +6877,7 @@ _Click the button below to download_`
     handsomecheck,beautifulcheck
     awesomecheck,greatcheck,gaycheck
     uglycheck,charactercheck,lesbiancheck
-    hornychec,prettycheck,lovelycheck
+    hornycheck,prettycheck,lovelycheck
 
 
  🈴  ⊱•─ {⋅✯ Weeb ✯⋅} ─•⊰
